@@ -5,88 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="omal is a vibe-coding IDE built for fast, creative development with a VS Code-inspired workflow."
+      content="omal is a minimal, VS Code-inspired AI IDE for fast, focused software creation."
     />
-    <title>omal — vibe coding IDE</title>
+    <title>omal — AI IDE for focused builders</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
+    <div class="site-shell">
       <header class="topbar">
-        <nav class="container nav">
-          <div class="brand" aria-label="omal brand">
+        <div class="container nav">
+          <a href="#" class="brand" aria-label="omal home">
             <span class="brand-mark">o</span>
             <span class="brand-name">omal</span>
-          </div>
-          <div class="nav-links">
+          </a>
+
+          <nav class="nav-links" aria-label="Main navigation">
             <a href="#features">Features</a>
             <a href="#workflow">Workflow</a>
             <a href="#why">Why omal</a>
             <a href="#launch">Launch</a>
-          </div>
-          <a class="nav-cta" href="#launch">Get early access</a>
-        </nav>
+          </nav>
+
+          <a href="#launch" class="button button-primary small">Get early access</a>
+        </div>
       </header>
 
       <main>
         <section class="hero container">
           <div class="hero-copy">
-            <span class="eyebrow">vibe coding, but serious</span>
-            <h1>Build ideas at the speed of thought.</h1>
+            <span class="eyebrow">AI IDE for creative builders</span>
+            <h1>Build software in flow.</h1>
             <p class="lead">
-              omal is a VS Code-inspired AI IDE for people who want to ship fast,
-              stay in flow, and turn rough ideas into polished software without losing
-              their creative rhythm.
+              omal is a VS Code-inspired IDE built for people who want to move from
+              idea to product without breaking momentum.
             </p>
-            <div class="hero-actions">
-              <a class="primary-btn" href="#launch">Join the beta</a>
-              <a class="secondary-btn" href="#features">Explore features</a>
+
+            <div class="cta-row">
+              <a href="#launch" class="button button-primary">Join the beta</a>
+              <a href="#features" class="button button-secondary">Explore features</a>
             </div>
-            <div class="hero-meta">
+
+            <div class="hero-stats">
               <div>
                 <strong>AI-native</strong>
-                <span>edit, generate, iterate</span>
+                <span>prompt-to-code workflow</span>
               </div>
               <div>
-                <strong>VS Code familiar</strong>
-                <span>clean workflows, built for real coding</span>
+                <strong>Familiar</strong>
+                <span>VS Code-inspired environment</span>
               </div>
               <div>
-                <strong>Flow-first</strong>
-                <span>fast feedback, minimal friction</span>
+                <strong>Fast</strong>
+                <span>clear, focused iteration</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="omal interface mockup">
+          <div class="hero-visual" aria-label="omal app preview">
             <div class="window-bar">
               <span></span>
               <span></span>
               <span></span>
             </div>
+
             <div class="editor">
               <aside class="sidebar">
-                <div class="side-pill active">app.tsx</div>
-                <div class="side-pill">components</div>
-                <div class="side-pill">prompts</div>
+                <div class="side-item active">app.tsx</div>
+                <div class="side-item">components</div>
+                <div class="side-item">prompts</div>
               </aside>
+
               <div class="code-panel">
-                <div class="code-badge">AI assistant</div>
+                <div class="panel-label">AI assistant</div>
+
                 <pre><code><span class="token key">const</span> <span class="token var">app</span> = <span class="token key">createApp</span>({
-  <span class="token key">idea</span>: <span class="token string">"vibe coding IDE"</span>,
+  <span class="token key">idea</span>: <span class="token string">"build in flow"</span>,
   <span class="token key">mode</span>: <span class="token string">"creative + production"</span>,
-  <span class="token key">output</span>: <span class="token string">"ship faster with flow"</span>
+  <span class="token key">output</span>: <span class="token string">"ship with clarity"</span>
 });</code></pre>
+
                 <div class="status-row">
-                  <span>Synced</span>
-                  <span class="dot green"></span>
                   <span>Ready</span>
+                  <span class="status-dot"></span>
                 </div>
               </div>
             </div>
@@ -95,75 +101,84 @@
 
         <section id="features" class="features container">
           <div class="section-heading">
-            <span class="eyebrow">why builders choose omal</span>
-            <h2>Design for momentum. Built for coding.</h2>
+            <span class="eyebrow muted">Features</span>
+            <h2>Designed for momentum.</h2>
           </div>
 
           <div class="feature-grid">
             <article class="feature-card">
-              <div class="icon">✦</div>
-              <h3>Vibe-aware AI</h3>
-              <p>
-                Turn prompts into code, UI, and structure with an assistant that understands
-                the intent behind the build, not just the syntax.
-              </p>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L15.5 8.5L22 12L15.5 15.5L12 22L8.5 15.5L2 12L8.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Intent-aware AI</h3>
+              <p>Turn rough ideas into structured code with a system that understands your build direction.</p>
             </article>
 
             <article class="feature-card">
-              <div class="icon">⚡</div>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M13 2L4 14H11L10 22L20 10H13L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3>Fast iteration</h3>
-              <p>
-                Jump from idea to working prototype without getting slowed down by context switching,
-                setup friction, or heavy tooling overhead.
-              </p>
+              <p>Move quickly from prototype to polished result without context switching or project drag.</p>
             </article>
 
             <article class="feature-card">
-              <div class="icon">▣</div>
-              <h3>VS Code familiarity</h3>
-              <p>
-                Keep the power and comfort of a familiar editor while layering in the speed of an
-                AI-native workspace.
-              </p>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 6.5C5 5.67 5.67 5 6.5 5H17.5C18.33 5 19 5.67 19 6.5V17.5C19 18.33 18.33 19 17.5 19H6.5C5.67 19 5 18.33 5 17.5V6.5Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 9H16M8 12H16M8 15H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Familiar workflow</h3>
+              <p>Stay in a VS Code-like environment while unlocking AI-guided speed and clarity.</p>
             </article>
 
             <article class="feature-card">
-              <div class="icon">◎</div>
-              <h3>Live workspace memory</h3>
-              <p>
-                Stay in context with persistent project awareness, smart suggestions, and a workflow
-                that remembers what matters.
-              </p>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3C16.97 3 21 7.03 21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 12H16M12 8V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Context memory</h3>
+              <p>Keep project awareness across sessions so the assistant understands what you’re building.</p>
             </article>
           </div>
         </section>
 
         <section id="workflow" class="workflow container">
           <div class="section-heading narrow">
-            <span class="eyebrow">the omal workflow</span>
-            <h2>From spark to shipped product.</h2>
+            <span class="eyebrow muted">Workflow</span>
+            <h2>From idea to shipped product.</h2>
           </div>
 
           <div class="steps">
             <div class="step">
               <span class="step-number">01</span>
-              <h3>Describe the vibe</h3>
-              <p>Say what you want to build, how it should feel, and what outcomes matter.</p>
+              <h3>Describe the idea</h3>
+              <p>Explain the product, the feel, and the outcome you want to build.</p>
             </div>
+
             <div class="step">
               <span class="step-number">02</span>
-              <h3>Generate the foundation</h3>
-              <p>omal scaffolds structure, code, and UI patterns in a way that feels immediate.</p>
+              <h3>Generate structure</h3>
+              <p>omal creates a working foundation and the code paths that matter most.</p>
             </div>
+
             <div class="step">
               <span class="step-number">03</span>
-              <h3>Refine in real time</h3>
-              <p>Adjust prompts, inspect output, and iterate inside the same creative loop.</p>
+              <h3>Refine in context</h3>
+              <p>Iterate quickly inside the same workflow, with project awareness intact.</p>
             </div>
+
             <div class="step">
               <span class="step-number">04</span>
-              <h3>Ship with confidence</h3>
-              <p>Move from experimentation to production-ready output without breaking flow.</p>
+              <h3>Ship confidently</h3>
+              <p>Move from rough concept to polished build without dropping your creative rhythm.</p>
             </div>
           </div>
         </section>
@@ -171,26 +186,27 @@
         <section id="why" class="story container">
           <div class="story-panel">
             <div class="story-copy">
-              <span class="eyebrow">built for modern builders</span>
-              <h2>Fast enough for prototypes. Serious enough for real work.</h2>
+              <span class="eyebrow muted">Why omal</span>
+              <h2>Minimal friction. Serious output.</h2>
               <p>
-                omal is shaped for developers, creators, and early-stage teams who want the energy of
-                a creative workspace with the power and clarity of a professional IDE. It keeps the VS Code
-                spirit you already know while opening the door to an AI-first way of building.
+                omal is built for developers, founders, and creative builders who want the
+                clarity of a professional IDE and the speed of an AI-native workflow.
+                It keeps the familiar VS Code feel without sacrificing momentum.
               </p>
             </div>
+
             <div class="story-metrics">
               <div>
                 <strong>10x</strong>
-                <span>quicker idea-to-prototype loop</span>
+                <span>faster idea-to-prototype loop</span>
               </div>
               <div>
                 <strong>1 flow</strong>
-                <span>single creative workspace</span>
+                <span>one workspace for coding and iteration</span>
               </div>
               <div>
                 <strong>∞</strong>
-                <span>room to iterate and improve</span>
+                <span>room to refine and improve</span>
               </div>
             </div>
           </div>
@@ -198,23 +214,23 @@
 
         <section id="launch" class="cta container">
           <div class="cta-card">
-            <p class="eyebrow">launching soon</p>
-            <h2>Bring omal to the world.</h2>
+            <span class="eyebrow">Launching soon</span>
+            <h2>Bring omal to the next wave of builders.</h2>
             <p>
-              Join the early-access list for the first wave of developers exploring the next generation
-              of vibe-first coding experiences.
+              Join the early-access list for the first users shaping the next AI-native
+              development workflow.
             </p>
-            <a class="primary-btn" href="mailto:hello@omal.dev">Request access</a>
+            <a href="mailto:hello@omal.dev" class="button button-primary">Request access</a>
           </div>
         </section>
       </main>
 
       <footer class="footer container">
-        <div class="brand footer-brand">
+        <a href="#" class="brand footer-brand" aria-label="omal home">
           <span class="brand-mark">o</span>
           <span class="brand-name">omal</span>
-        </div>
-        <p>vibe coding IDE for modern builders.</p>
+        </a>
+        <p>AI IDE for focused builders.</p>
       </footer>
     </div>
 
