@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>omal dev build - download</title>
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --card: #ffffff;
+    --text: #1d1f24;
+    --muted: #6b7079;
+    --accent: #d9302c;
+    --bar: #e3e5e9;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --card: #1f2127;
+      --text: #f1f2f4;
+      --muted: #9aa0aa;
+      --bar: #2c2f37;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: env(safe-area-inset-top, 0px) 16px env(safe-area-inset-bottom, 0px);
+  }
+  .card {
+    width: 100%;
+    max-width: 440px;
+    background: var(--card);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  }
+  .logo {
+    width: 64px; height: 64px;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+  .file {
+    display: flex; justify-content: space-between;
+    font-size: 14px; margin-bottom: 8px;
+  }
+  .track {
+    height: 10px; background: var(--bar);
+    border-radius: 999px; overflow: hidden;
+  }
+  .fill {
+    height: 100%; width: 0%;
+    background: var(--accent);
+    transition: width 0.3s linear;
+  }
+  .meta {
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: var(--muted); margin-top: 10px;
+  }
+  .status { margin-top: 18px; font-size: 13px; color: var(--muted); min-height: 1.2em; }
+  button {
+    margin-top: 18px; width: 100%;
+    padding: 12px; border: 0; border-radius: 10px;
+    background: var(--accent); color: #fff;
+    font-size: 15px; font-weight: 600; cursor: pointer;
+  }
+  button:disabled { opacity: 0.5; cursor: default; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" alt="omal" src="data:image/png;base64,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">
+    <h1>omal dev build</h1>
+    <p class="sub">Unstable nightly. Things may break. Probably not in the way you'd hope.</p>
+
+    <div class="file">
+      <span id="fname">omal-dev-build-x64.exe</span>
+      <span id="size">Calculating…</span>
+    </div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <div class="meta">
+      <span id="pct">0%</span>
+      <span id="eta">ETA --:--</span>
+    </div>
+    <div class="status" id="status">Starting download…</div>
+
+    <button id="btn" disabled>Downloading…</button>
+  </div>
+
+<script>
+  const fill = document.getElementById('fill');
+  const pct = document.getElementById('pct');
+  const eta = document.getElementById('eta');
+  const size = document.getElementById('size');
+  const status = document.getElementById('status');
+  const btn = document.getElementById('btn');
+
+  const messages = [
+    'Starting download…',
+    'Connecting to mirror eu-3…',
+    'Verifying signature… (skipped)',
+    'Resolving dependencies…',
+    'Downloading core modules…',
+    'Almost there, do not close this tab…',
+    'Finalizing…'
+  ];
+
+  let progress = 0;
+  const total = (Math.random() * 300 + 180).toFixed(1);
+  size.textContent = total + ' MB';
+
+  // Scale the fake speed by the user's connection (Network Information API).
+  // Falls back to a moderate speed when the browser does not report it.
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  const downlink = conn && typeof conn.downlink === 'number' ? conn.downlink : 10; // Mbps
+  const speedFactor = Math.min(1, Math.max(0.12, downlink / 40));
+  const baseStep = 3.2 * speedFactor;
+  const minStep = 0.4 * speedFactor;
+
+  const timer = setInterval(() => {
+    progress += Math.random() * baseStep + minStep;
+    if (progress > 100) progress = 100;
+
+    const p = Math.floor(progress);
+    fill.style.width = progress + '%';
+    pct.textContent = p + '%';
+
+    const remaining = Math.max(0, Math.round((100 - progress) / (2.4 * speedFactor)));
+    eta.textContent = 'ETA ' + String(Math.floor(remaining / 60)).padStart(2, '0') + ':' + String(remaining % 60).padStart(2, '0');
+
+    status.textContent = messages[Math.min(messages.length - 1, Math.floor(progress / 15))];
+
+    if (progress >= 100) {
+      clearInterval(timer);
+      eta.textContent = 'Done';
+      status.textContent = 'Download complete. Verifying checksum… ✓';
+      btn.disabled = false;
+      btn.textContent = 'Install omal dev build';
+      setTimeout(() => {
+        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+      }, 1800);
+    }
+  }, 250);
+</script>
+</body>
+</html>
